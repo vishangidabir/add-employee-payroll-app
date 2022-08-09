@@ -23,6 +23,22 @@ class EmployeePayrollData {
         }
     }
 
+    get profilePic(){
+        return this._profilePic;
+    }
+
+    set profilePic(profilePic){
+        this._profilePic = profilePic;
+    }
+
+    get gender(){
+        return this._gender;
+    }
+
+    set gender(gender){
+        this._gender = gender;
+    }
+
     get department(){
         return this._department;
     }
@@ -39,12 +55,12 @@ class EmployeePayrollData {
         this._salary = salary;
     }
 
-    get note(){
-        return this._note;
+    get notes(){
+        return this._notes;
     }
 
-    set note(note){
-        this._note = note;
+    set notes(notes){
+        this._notes = notes;
     }
 
     get startDate(){
