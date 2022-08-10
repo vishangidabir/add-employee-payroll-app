@@ -25,9 +25,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const save = () => {
         try {
             let employeePayrollData = createEmployeePayroll(); 
+            createAndUpdateStorage(employeePayrollData);
         } catch (e) {
             return;
         }
+    }
+
+    function  createAndUpdateStorage(employeePayrollData){
+        let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+        if(employeePayrollList != undefined){
+            employeePayrollList.push(employeePayrollList);
+        }else{
+            employeePayrollList = [employeePayrollData];
+        }
+        alert(employeePayrollList.toString());
+        localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
     }
 
     const createEmployeePayroll = () => {
@@ -35,7 +47,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         try {
             employeePayrollData.name = getInputValueById('#name');
         } catch (e) {
-            setTextValue('.text-error',e);
+            setTextValue('.text-error', e);
             throw e;
         }
         employeePayrollData.profilePic = getSelectedValue('[name=profile]').pop();

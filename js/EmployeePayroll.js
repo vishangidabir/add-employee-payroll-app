@@ -55,12 +55,12 @@ class EmployeePayrollData {
         this._salary = salary;
     }
 
-    get notes(){
-        return this._notes;
+    get note(){
+        return this._note;
     }
 
-    set notes(notes){
-        this._notes = notes;
+    set note(note){
+        this._note = note;
     }
 
     get startDate(){
@@ -81,5 +81,6 @@ class EmployeePayrollData {
                 ", salary=" + this.salary + ", startDate=" + empDate + ",note=" + this.note;
     }
 }
+
 
 
