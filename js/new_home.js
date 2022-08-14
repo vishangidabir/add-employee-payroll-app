@@ -43,3 +43,13 @@ const getDeptHtml = (deptList) => {
     return deptHtml;
 }
 
+const remove = (node) => {
+    employeePayrollList.splice(parseInt(node.id), 1);
+    localStorage.setItem("employeePayrollList", JSON.stringify(employeePayrollList));
+    createInnerHtml();
+}
+
+
+
+
+
