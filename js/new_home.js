@@ -49,6 +49,17 @@ const remove = (node) => {
     createInnerHtml();
 }
 
+const update = (node) => {
+    const currentUri = window.location.href;
+    const addUri = currentUri.replace("new_home", "new_payroll_form");
+    window.location.replace(addUri + "?index=" + node.id);
+}
+
+
+
+
+
+
 
 
 
